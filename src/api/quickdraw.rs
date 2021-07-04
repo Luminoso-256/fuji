@@ -18,7 +18,8 @@ pub struct Pen {
 }
 
 pub struct RenderQueue {
-    pub(crate) lines: Vec<RqLine>
+    pub(crate) lines: Vec<RqLine>,
+
 }
 
 pub struct RqLine {
@@ -26,11 +27,27 @@ pub struct RqLine {
     end: Vec2,
 }
 
+pub struct RqRect{
+    x:i32,
+    y:i32,
+    w:i32,
+    h:i32
+}
+
+pub enum FillRectPattern{
+    White,
+    Black,
+    Gray,
+    LtGray, //Light Gray
+    DkGray //dark gray
+}
+
 //due to reference things, this is handled as a struct/impl
 //really would be way better as a class, but this is rust's closest analog to that
 pub struct QuickDraw {
     pub(crate) pen: Pen,
     pub(crate) render_queue: RenderQueue,
+
 }
 
 impl QuickDraw {
@@ -42,6 +59,7 @@ impl QuickDraw {
         for line in &self.render_queue.lines {
             draw_line(line.start.x as f32, line.start.y as f32, line.end.x as f32, line.end.y as f32, 1.0, BLACK);
         }
+
 
 
     }
@@ -82,6 +100,16 @@ impl QuickDraw {
         self.pen.x = x;
         self.pen.y = y;
     }
+
+    //TODO: Implement this once proper sizing and scaling for the Macroquad window is builtin
+    pub fn SetDrawingRect(){}
+
+    //TODO: Implement this with SetDrawingRect as part of screen controls
+    pub fn ShowDrawing(&mut self){}
+
+
+
+
 }
 
 

@@ -27,7 +27,8 @@ fn main() {
             "test>gui" => {
 
                 macroquad::Window::new("Fuji | GUI Window", gui_main());
-            }
+            },
+
             _ => println!("[Err] Invalid command given")
         }
     }
