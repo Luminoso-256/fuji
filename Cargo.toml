@@ -7,4 +7,4 @@ edition = "2018"
 
 [dependencies]
 macroquad = "0.3.6"
-structview = "1.1.0"
+byteorder = "1.4.3"

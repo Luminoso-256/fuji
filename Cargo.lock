@@ -352,8 +352,8 @@ dependencies = [
 name = "fuji"
 version = "0.1.0"
 dependencies = [
+ "byteorder",
  "macroquad",
- "structview",
 ]
 
 [[package]]
@@ -1019,27 +1019,6 @@ name = "strsim"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6446ced80d6c486436db5c078dde11a9f73d42b57fb273121e160b84f63d894c"
-
-[[package]]
-name = "structview"
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c0d596711317178a78de98b3e30e151fb3d3bbff000f5da37e2b460b99c2182"
-dependencies = [
- "byteorder",
- "structview_derive",
-]
-
-[[package]]
-name = "structview_derive"
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e738957e98ce93e9ecad0df60ffe77bd8511a9a1c503f6def8a4cd28ae53b59a"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
 
 [[package]]
 name = "syn"

@@ -28,7 +28,9 @@ fn main() {
 
                 macroquad::Window::new("Fuji | GUI Window", gui_main());
             },
-
+            "test>hfs" => {
+                crate::system::hfs::read_disk("C:\\Users\\Lumen\\Downloads\\Apps4\\apps4.dsk")
+            }
             _ => println!("[Err] Invalid command given")
         }
     }
